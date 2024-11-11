@@ -6,7 +6,9 @@ const {registerUser, loginUser} = require("../controllers/userController");
 const path = require("path");
 
 router.use(cookieParser());
-
+router.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/rice.html"));
+});
 // 순서 변경: 로그인/회원가입 라우트를 먼저 정의
 router.get("/login", (req, res) => {
     // 이미 로그인된 경우 메인 페이지로
