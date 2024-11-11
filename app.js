@@ -1,7 +1,6 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require('cors');
-const cookieParser = require("cookie-parser");
 const path = require("path");
 const connectDb = require("./config/db");
 
@@ -12,10 +11,12 @@ connectDb();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use(express.static(path.join(__dirname, 'public'))); 
 
-// 모든 라우트를 userRoutes로 처리
+// 라우터를 static 파일 미들웨어보다 먼저 설정
 app.use("/", require("./routes/userRoutes")); 
+
+// static 파일 미들웨어는 그 다음에
+app.use(express.static(path.join(__dirname, 'public'))); 
 
 const port = process.env.PORT || 3000;
 
