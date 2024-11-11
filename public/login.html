@@ -134,6 +134,7 @@
                    headers: {
                        'Content-Type': 'application/json'
                    },
+                   credentials: 'include',
                    body: JSON.stringify(formData)
                });
 
@@ -141,7 +142,7 @@
                
                if (data.success) {
                    alert(data.message);  // "로그인이 완료되었습니다." 메시지 표시
-                   window.location.href = '/rice.html';  // 홈페이지로 리다이렉트
+                   window.location.href = '/';  // 홈페이지로 리다이렉트
                } else {
                    document.getElementById('errorMessage').style.display = 'block';
                    alert(data.message);  // 에러 메시지 표시
