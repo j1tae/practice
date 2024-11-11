@@ -213,11 +213,12 @@ function showRating() {
 // }
 
 function showLogin() {
-    // 로그인 페이지나 모달을 표시하는 코드
-    alert("로그인 기능은 아직 구현되지 않았습니다.");
+    window.location.href = '/login'; // 로그인 페이지로 이동
 }
 
 function showSignup() {
-    // 회원가입 페이지나 모달을 표시하는 코드
-    alert("회원가입 기능은 아직 구현되지 않았습니다.");
+    window.location.href = '/register'; // 회원가입 페이지로 이동
+}
+function goHome() {
+    window.location.href = '/';   // '/' 제거
 }
