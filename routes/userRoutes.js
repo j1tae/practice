@@ -14,9 +14,6 @@ router.get("/", (req, res) => {
 
 // 로그인/회원가입 라우트
 router.get("/login", (req, res) => {
-    if (req.cookies && req.cookies.token) {
-        return res.redirect('/');  // 메인 페이지(rice.html)로 리디렉션
-    }
     res.sendFile(path.join(__dirname, "../public/login.html"));
 });
 
