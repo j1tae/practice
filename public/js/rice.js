@@ -188,7 +188,7 @@ function showBoard() {
     window.location.href = '/board.html'; // 게시판으로 이동
 }
 function showRating() {
-    window.location.href = '#2'; // 평가로 이동
+    window.location.href = '/eval.html'; // 평가로 이동
 }
 
 // 로그인이 구현되면 사용
@@ -220,5 +220,5 @@ function showSignup() {
     window.location.href = '/register'; // 회원가입 페이지로 이동
 }
 function goHome() {
-    window.location.href = '/';   // '/' 제거
+    window.location.href = '/index.html';   // '/' 제거
 }

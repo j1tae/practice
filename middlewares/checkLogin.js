@@ -5,7 +5,7 @@ const jwtSecret = process.env.JWT_SECRET;
 const checkLogin = async(req, res, next) => {
     const token = req.cookies.token;
     if(!token){
-        return res.redirect("/login");//토큰이 없을 경우 로그인 페이지로 이동
+        return res.redirect("/login");
     }
     try{
         const decoded = jwt.verify(token, jwtSecret);

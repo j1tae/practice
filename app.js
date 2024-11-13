@@ -14,6 +14,7 @@ app.use(express.urlencoded({extended: true}));
 
 // 라우터를 static 파일 미들웨어보다 먼저 설정
 app.use("/", require("./routes/userRoutes")); 
+app.use("/", require("./routes/postRoutes"));
 
 // static 파일 미들웨어는 그 다음에
 app.use(express.static(path.join(__dirname, 'public'))); 

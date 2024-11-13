@@ -291,7 +291,7 @@ function initializePosts() {
 }
 
 function goHome() {
-    window.location.href = '/'; // 홈으로 이동
+    window.location.href = '/index.html'; // 홈으로 이동
 }
 
 
